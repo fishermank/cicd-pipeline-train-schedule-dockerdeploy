@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Test') {
+            steps {
+                echo 'cat package.json'
+                sh 'cat package.json'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Running build automation'
